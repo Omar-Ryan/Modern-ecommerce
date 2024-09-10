@@ -58,7 +58,6 @@ const Header = () => {
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"  */}
                   <a
                     href="#"
                     className="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
@@ -109,7 +108,7 @@ const Header = () => {
                     aria-expanded="false"
                     aria-haspopup="true"
                   >
-                    <RxAvatar className="w-full h-full text-slate-300 hover:text-white" />
+                    <RxAvatar className="w-full h-full cctext-slate-300 hover:text-white" />
                   </button>
                 </div>
 
@@ -156,7 +155,6 @@ const Header = () => {
         {/* Mobile menu, show/hide based on menu state.  */}
         <div className="sm:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"  */}
             <a
               href="#"
               className="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
