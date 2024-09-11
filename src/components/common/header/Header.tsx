@@ -1,4 +1,5 @@
 import { RxAvatar } from "react-icons/rx";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -58,25 +59,31 @@ const Header = () => {
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/"
                     className="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
                     aria-current="page"
                   >
                     Home
-                  </a>
-                  <a
-                    href="#"
+                  </NavLink>
+                  <NavLink
+                    to="categories"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     Categories
-                  </a>
-                  <a
-                    href="#"
+                  </NavLink>
+                  {/* <NavLink
+                    to="products/:"
+                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                  >
+                    Products
+                  </NavLink> */}
+                  <NavLink
+                    to="about-us"
                     className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
                   >
                     About
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>
