@@ -1,5 +1,4 @@
-import Footer from "../../components/common/footer/Footer";
-import Header from "../../components/common/header/Header";
+import { Header, Footer } from "../../components/common";
 
 const MainLayout = () => {
   return (
