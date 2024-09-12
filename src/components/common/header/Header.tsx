@@ -61,26 +61,34 @@ const Header = () => {
                 <div className="flex space-x-4">
                   <NavLink
                     to="/"
-                    className="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
+                    // end
+                    className={({ isActive }) =>
+                      isActive
+                        ? "px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
+                        : "px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:text-white"
+                    }
                     aria-current="page"
                   >
                     Home
                   </NavLink>
                   <NavLink
                     to="categories"
-                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                    // className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md active:text-white active:bg-gray-900 hover:text-white"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
+                        : "px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:text-white"
+                    }
                   >
                     Categories
                   </NavLink>
-                  {/* <NavLink
-                    to="products/:"
-                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                  >
-                    Products
-                  </NavLink> */}
                   <NavLink
                     to="about-us"
-                    className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
+                        : "px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:text-white"
+                    }
                   >
                     About
                   </NavLink>
@@ -164,20 +172,20 @@ const Header = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a
               href="#"
-              className="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md active:text-white active:bg-gray-900 hover:text-white"
               aria-current="page"
             >
               Home
             </a>
             <a
               href="#"
-              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md active:text-white active:bg-gray-900 hover:text-white"
             >
               Categories
             </a>
             <a
               href="#"
-              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+              className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md active:text-white active:bg-gray-900 hover:text-white"
             >
               About
             </a>
