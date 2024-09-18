@@ -6,7 +6,7 @@ type TResponse = {
   title: string;
   prefix: string;
   img: string;
-};
+}[];
 
 const actGetCategories = createAsyncThunk(
   "categories/actGetCategories",
