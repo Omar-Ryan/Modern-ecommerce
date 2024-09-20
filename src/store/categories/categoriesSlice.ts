@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import actGetCategories from "./act/actGetCategories";
+import { ICategoryProps, TLoading } from "../../types/shared";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 // import type { RootState } from '../../app/store'
 
 interface ICategoriesState {
-  records: { id: number; title: string; prefix: string; img: string }[];
-  loading: "idle" | "pending" | "succeeded" | "failed";
+  records: ICategoryProps[];
+  loading: TLoading;
   error: string | null;
 }
 

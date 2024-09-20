@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, useEffect } from "react";
+import { useEffect } from "react";
 import { Category } from "../components/eCommerce";
 import actGetCategories from "../store/categories/act/actGetCategories";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
