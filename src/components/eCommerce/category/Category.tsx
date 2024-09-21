@@ -9,9 +9,9 @@ import { ICategoryProps } from "../../../types/shared";
 
 const Category = ({ title, prefix, img }: ICategoryProps) => {
   return (
-    <div className="w-44 h-44">
+    <div>
       <Link to={`/categories/products/${prefix}`}>
-        <div className="overflow-hidden bg-[#f2f2f2] rounded-[50%]">
+        <div className="overflow-hidden bg-[#f2f2f2] rounded-[50%] w-44 h-44">
           <img
             // src="https://cdn-eu.dynamicyield.com/api/9876644/images/244c68ad42d8b__hp-w12-22032022-h_m-women_shirts-blouses.jpg"
             src={img}
