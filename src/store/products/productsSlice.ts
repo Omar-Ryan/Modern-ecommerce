@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import actGetProductsByCatPrefix from "./act/actGetProductsByCatPrefix";
-import { IProductProps, TLoading } from "../../types/shared";
+import { ProductProps, TLoading } from "../../types/shared";
 
-interface IProductsState {
-  records: IProductProps[];
+interface ProductsStateProps {
+  records: ProductProps[];
   loading: TLoading;
   error: string | null;
 }
 
-const initialState: IProductsState = {
+const initialState: ProductsStateProps = {
   records: [],
   loading: "idle",
   error: null,

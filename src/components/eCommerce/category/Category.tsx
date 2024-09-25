@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ICategoryProps } from "../../../types/shared";
+import { CategoryProps } from "../../../types/shared";
 
 // interface CategoryProps {
 //   title: string;
@@ -7,7 +7,7 @@ import { ICategoryProps } from "../../../types/shared";
 //   img: string;
 // }
 
-const Category = ({ title, prefix, img }: ICategoryProps) => {
+const Category = ({ title, prefix, img }: CategoryProps) => {
   return (
     <div>
       <Link to={`/categories/products/${prefix}`}>

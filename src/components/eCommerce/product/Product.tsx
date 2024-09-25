@@ -1,6 +1,6 @@
-import { IProductProps } from "../../../types/shared";
+import { ProductProps } from "../../../types/shared";
 
-const Product = ({ title, price, cat_prefix, img }: IProductProps) => {
+const Product = ({ title, price, cat_prefix, img }: ProductProps) => {
   return (
     <div className="w-[120px] flex justify-between flex-col">
       <div className="overflow-hidden bg-[#f2f2f2] h-44 w-full">

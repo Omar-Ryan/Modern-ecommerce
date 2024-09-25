@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { IProductProps } from "../../../types/shared";
+import { ProductProps } from "../../../types/shared";
 
-type TResponse = IProductProps[];
+type TResponse = ProductProps[];
 
 const actGetProductsByCatPrefix = createAsyncThunk(
   "products/actGetProductsByCatPrefix",

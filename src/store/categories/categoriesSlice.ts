@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import actGetCategories from "./act/actGetCategories";
-import { ICategoryProps, TLoading } from "../../types/shared";
+import { CategoryProps, TLoading } from "../../types/shared";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 // import type { RootState } from '../../app/store'
 
-interface ICategoriesState {
-  records: ICategoryProps[];
+interface CategoriesStateProps {
+  records: CategoryProps[];
   loading: TLoading;
   error: string | null;
 }
 
-const initialState: ICategoriesState = {
+const initialState: CategoriesStateProps = {
   records: [],
   loading: "idle",
   error: null,

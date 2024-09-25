@@ -1,4 +1,4 @@
-export interface ICategoryProps {
+export interface CategoryProps {
   id?: number;
   title: string;
   prefix: string;
@@ -6,10 +6,11 @@ export interface ICategoryProps {
 }
 export type TLoading = "idle" | "pending" | "succeeded" | "failed";
 
-export interface IProductProps {
+export interface ProductProps {
   id?: number;
   title: string;
   price: string;
   cat_prefix: string;
   img: string;
+  quantity?: number;
 }
