@@ -1,7 +1,14 @@
 import { RxAvatar } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
+import { useAppSelector } from "../../../store/hooks";
 
 const Header = () => {
+  const cartItems = useAppSelector((state) => state.cart.items);
+  const cartQuantity = Object.values(cartItems).reduce(
+    (acc: number, curr: number) => acc + curr,
+    0
+  );
+
   return (
     <header>
       <nav className="bg-gray-800">
@@ -109,7 +116,7 @@ const Header = () => {
                 </svg>
 
                 <div className="absolute bottom-0 right-0 flex items-center justify-center w-6 h-6 text-white bg-red-700 rounded-full translate-x-1/4 translate-y-1/4 ">
-                  {/* {cartQuantity} */}3
+                  {cartQuantity}
                 </div>
               </button>
 
