@@ -5,12 +5,18 @@ import { useAppDispatch, useAppSelector } from "../store/hooks";
 import actGetProductsByCatPrefix from "../store/products/act/actGetProductsByCatPrefix";
 import { productsCleanup } from "../store/products/productsSlice";
 import { Loading } from "../components/feedback";
-import { GridList } from "../components/common";
+import { GridList, Heading } from "../components/common";
 
 const Products = () => {
   const params = useParams();
   const dispatch = useAppDispatch();
   const { loading, error, records } = useAppSelector((state) => state.products);
+
+  const cartItems = useAppSelector((state) => state.cart.items);
+  const productFullInfo = records.map((ele) => ({
+    ...ele,
+    quantity: cartItems[ele.id] || 0,
+  }));
 
   useEffect(() => {
     // let prefix : string;
@@ -27,10 +33,13 @@ const Products = () => {
 
   return (
     <div className="container">
+      <Heading>
+        <span>{params.prefix}</span> Products
+      </Heading>
       <div className="flex flex-wrap justify-between w-full gap-3">
         <Loading status={loading} error={error}>
           <GridList
-            records={records}
+            records={productFullInfo}
             renderItem={(records) => <Product {...records} />}
           />
         </Loading>
