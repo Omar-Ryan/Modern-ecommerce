@@ -7,6 +7,7 @@ import AboutUs from "../pages/AboutUs";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ErrorPage from "../pages/ErrorPage";
+import Cart from "../pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "categories", element: <Categories /> },
+      { path: "cart", element: <Cart /> },
       {
         path: "categories/products/:prefix",
         element: <Products />,

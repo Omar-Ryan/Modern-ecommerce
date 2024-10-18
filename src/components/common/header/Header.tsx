@@ -1,5 +1,5 @@
 import { RxAvatar } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../../store/hooks";
 import { useEffect, useState } from "react";
 import "./styles.css";
@@ -10,6 +10,8 @@ const Header = () => {
     (acc: number, curr: number) => acc + curr,
     0
   );
+
+  const navigate = useNavigate();
 
   const [pumpAnimate, setPumpAnimate] = useState(false);
 
@@ -119,6 +121,7 @@ const Header = () => {
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <button
+                onClick={() => navigate("cart")}
                 type="button"
                 className="relative w-12 h-12 p-1 bg-gray-800 rounded-full text-cyan-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
