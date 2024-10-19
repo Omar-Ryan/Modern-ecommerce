@@ -1,4 +1,4 @@
-import { CartItems } from "../components/eCommerce";
+import { CartItems, CartSubtotalPrice } from "../components/eCommerce";
 
 const Cart = () => {
   return (
@@ -7,6 +7,7 @@ const Cart = () => {
       <CartItems />
       <CartItems />
       <CartItems />
+      <CartSubtotalPrice />
     </div>
   );
 };
